@@ -27,6 +27,7 @@ import {
   AtomIcon,
   BarChart3Icon,
   BarChartIcon,
+  BookIcon,
   ChartNetworkIcon,
   ChevronRightIcon,
   GithubIcon,
@@ -191,9 +192,7 @@ function MobileNavigation({
               className={`mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground`}
             />
             <div>
-              <h3 className="text-sm font-semibold">
-                Science Dataset Explorer
-              </h3>
+              <h3 className="text-sm font-semibold">Aella Dataset Explorer</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 This is a dataset of structured summaries from 100,000
                 scientific papers generated using a custom fine-tuned model.
@@ -744,6 +743,21 @@ export default function LaionApp() {
                   </Button>
                 }
               />
+              <Button
+                size="xs"
+                disabled={viewMode === "samples"}
+                variant="outline"
+                onClick={() =>
+                  window.open(
+                    "https://inference.net/blog/project-aella",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
+              >
+                <BookIcon className="mr-2 h-4 w-4" />
+                Read Blog
+              </Button>
               <Button
                 size="xs"
                 variant="outline"
